@@ -1,4 +1,14 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Container } from "~/components/landingPage/Container";
+import { Footer } from "~/components/landingPage/Footer";
+import { Header } from "~/components/landingPage/Header";
+import { MainContainer } from "~/components/landingPage/MainContainer";
+import { ColorContainer } from "~/components/landingPage/sections/ColorContainer";
+import { DemoSection } from "~/components/landingPage/sections/demo/DemoSection";
+import { FeatureSection } from "~/components/landingPage/sections/features/FeatureSection";
+import { HeroSection } from "~/components/landingPage/sections/hero/HeroSection";
+import { PricingSection } from "~/components/landingPage/sections/pricing/PricingSection";
+import { ProblemSection } from "~/components/landingPage/sections/problem/ProblemSection";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,40 +19,32 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/quickstart"
-            rel="noreferrer"
-          >
-            5m Quick Start
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/tutorial"
-            rel="noreferrer"
-          >
-            30m Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <>
+      <MainContainer>
+        <Container>
+          <Header />
+        </Container>
+        <main>
+          <ColorContainer>
+            <HeroSection />
+          </ColorContainer>
+          <ColorContainer>
+            <ProblemSection />
+          </ColorContainer>
+          <ColorContainer>
+            <FeatureSection />
+          </ColorContainer>
+          <ColorContainer>
+            <DemoSection />
+          </ColorContainer>
+          <ColorContainer>
+            <PricingSection />
+          </ColorContainer>
+        </main>
+        <Container>
+          <Footer />
+        </Container>
+      </MainContainer>
+    </>
   );
 }
