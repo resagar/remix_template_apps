@@ -8,7 +8,7 @@ export const Pricing = () => (
       id="pricing"
       className="h-full w-full flex flex-row justify-center items-center gap-8"
     >
-      <Card>
+      <Card className="max-w-md gap-5 lg:gap-8">
         <div className="flex flex-col justify-center items-start text-left">
           <p className="text-lg lg:text-xl font-bold">Precio 1</p>
           <p className="mt-2">
@@ -54,7 +54,7 @@ export const Pricing = () => (
           </p>
         </div>
       </Card>
-      <Card>
+      <Card className="max-w-md gap-5 lg:gap-8">
         <div className="flex flex-col text-left">
           <p className="text-lg lg:text-xl font-bold">Precio 1</p>
           <p className="mt-2">

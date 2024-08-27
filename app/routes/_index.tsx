@@ -1,9 +1,10 @@
-import type { MetaFunction } from "@remix-run/node";
+import { type MetaFunction } from "@remix-run/node";
 import { Container } from "~/components/landingPage/Container";
 import { Footer } from "~/components/landingPage/Footer";
 import { Header } from "~/components/landingPage/Header";
 import { MainContainer } from "~/components/landingPage/MainContainer";
 import { ColorContainer } from "~/components/landingPage/sections/ColorContainer";
+import { CtaSection } from "~/components/landingPage/sections/cta/CtaSection";
 import { DemoSection } from "~/components/landingPage/sections/demo/DemoSection";
 import { FeatureSection } from "~/components/landingPage/sections/features/FeatureSection";
 import { HeroSection } from "~/components/landingPage/sections/hero/HeroSection";
@@ -39,6 +40,9 @@ export default function Index() {
           </ColorContainer>
           <ColorContainer>
             <PricingSection />
+          </ColorContainer>
+          <ColorContainer>
+            <CtaSection />
           </ColorContainer>
         </main>
         <Container>

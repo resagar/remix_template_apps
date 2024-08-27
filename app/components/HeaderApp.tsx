@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 import logo from "~/logo/logo.png";
 
-export const Header = () => (
+export const HeaderApp = () => (
   <header className="w-full px-8 py-4">
     <nav className="flex flex-row items-center justify-between bg-base-100">
       <div>
@@ -14,7 +14,7 @@ export const Header = () => (
         </Link>
       </div>
       <div className="flex flex-row items-center gap-1">
-        <Link to="/login" className="btn">
+        <Link to="/" className="btn">
           Login
         </Link>
       </div>

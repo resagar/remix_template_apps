@@ -1,8 +1,14 @@
 import { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
-export const ColorContainer = ({ children }: { children: ReactNode }) => (
-  // TODO: falta agregar bg-color y text-color
+export const ColorContainer = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => (
   <>
-    <section className="w-full">{children}</section>
+    <section className={twMerge("w-full", className)}>{children}</section>
   </>
 );

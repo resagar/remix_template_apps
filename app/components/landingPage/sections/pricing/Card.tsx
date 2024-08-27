@@ -11,7 +11,7 @@ export const Card = ({
   <>
     <div
       className={twMerge(
-        "card p-8 h-full w-full max-w-md card-bordered rounded-3xl gap-5 lg:gap-8",
+        "card p-8 h-full w-full card-bordered rounded-3xl",
         className
       )}
     >
